@@ -1,0 +1,13 @@
+<div>
+    <table border = "1">
+        <tr>
+            <th>id</th><th>name</th><th>salary</th><th>state</th><th>city</th>
+        </tr>
+        <tr *ngFor = "let employee of employees">
+            <td>{{employee.id}}</td><td>{{employee.name}}</td><td>{{employee.salary}}
+
+            </td><td>{{employee.address.state}}</td><td>{{employee.address.city}}</td>
+        </tr>
+    </table>
+    <hr />
+</div>
