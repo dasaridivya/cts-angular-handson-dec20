@@ -1,0 +1,13 @@
+<div>
+    <app-childcounter  [username] = "name"
+                        [LikesAfterClear] = "likes"
+                        [DislikesAfterClear] = "dislikes"
+                        (likesCount) = "likes=$event"
+                         (dislikesCount) = "dislikes=$event">
+    </app-childcounter>
+    <h1>Number of likes : <span style="color: green;">{{likes}}</span></h1>
+    <h1>Number of dislikes : <span style="color: red;">{{dislikes}}</span></h1>
+</div>
+
+<button (click) = "clearOnClick()">Clear</button>
+
