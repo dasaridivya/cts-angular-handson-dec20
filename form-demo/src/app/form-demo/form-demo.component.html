@@ -1,0 +1,21 @@
+<div>
+    <h2>Angular Forms</h2>
+    <form #userForm = "ngForm" (ngSubmit) = "handleFormValues(userForm.value)">
+    
+    <label>
+        Enter username:<input type="text"name="user" [(ngModel)]="username"
+        #us="ngModel" required >
+    <span style="color:red" [hidden]="us.pristine||us.value">username is mandatory</span>
+    </label>
+    <br/>
+    <label>
+        Enter password:<input type="text" name="pass" [(ngModel)]="password" required>
+    </label>
+    <br/>
+    <label>
+        Enter Phone number:<input type="number" name="num" [(ngModel)]="number" required>
+    </label>
+    <br/>
+    <input type = "submit" value = "Submit"  [disabled] = "userForm.invalid">
+    </form>
+</div>
